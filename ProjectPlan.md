@@ -1,6 +1,6 @@
 Overview: Sarah 
 
-Team: Sarah, Sambhavi, Anthony
+Team: Sarah: Overview & Research Questions, Sambhavi: Anthony
 
 Research or Business Question(s): Sarah
 
