@@ -1,8 +1,14 @@
-Overview: Sarah 
+Overview:
+For our final project, we plan to investigate if higher education degrees are beneficial around the world. We plan to gather data from around the world and see if countries with higher college enrollment rates have lower unemployment rates. We will look into unemployment rates from the past 10 years, alongside college degree rates globally. To accomplish our goal, we will combine three datasets that discuss countries' unemployment rates, adults from ages 25 to 64 and their highest education levels, and the gross enrollment ratio for each country.
+Our project outline will have four main components. We will first clean each dataset by removing empty values, and renaming any columns that we deem fit. For example, this could be renaming values that are abbreviated country names, or have their regions, and then changing them to their corresponding country. After cleaning our data, we will then merge these three datasets by country and year. In order to answer our research questions, we will include relevant summary statistics and data visualizations. Overall, our goal is to identify a correlation between higher education rates and unemployment rates to understand if higher education is a smart financial decision for adults.
 
 Team: Sarah: Overview & Research Questions, Sambhavi:, Anthony: Datasets,
 
-Research or Business Question(s): Sarah
+Research or Business Question(s): 
+1. Is there a correlation between higher education rates and lower unemployment rates?
+2. Within the past 10 years, has the relationship between higher education and unemployment changed?
+3. Do the United States' college enrollments compare to other countries?
+4. Can we identify employment and higher education outliers? 
 
 Datasets: 
 The first dataset was created by the International Monetary Fund (IMF), through its World Economic Outlook report, which consists of economic indicators for each country annually. Created during the biannual WEO exercise, this dataset contains a list of countries and their unemployment rates from 2017 to 2026. This dataset will serve as the outcome variable to measure unemployment and examine the relationship between education and unemployment rate for each country reported.
