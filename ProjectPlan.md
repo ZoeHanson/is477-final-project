@@ -23,4 +23,13 @@ Timeline:
 
 Constraints:
 
+One major constraint is that our three datasets differ in country coverage, time periods, and definitions of higher education. The IMF dataset includes unemployment rates from 2017 to 2026, while the OECD dataset focuses on educational attainment among adults aged 25–64 and may not cover every country in the IMF dataset. The World Bank dataset measures gross tertiary enrollment rather than the percentage of adults who have completed a degree. These differences may limit the number of countries and years available after merging the datasets.
+
+Another challenge is handling missing values and inconsistencies, such as different country names, incomplete records, and differences in how education is measured. Additionally, a correlation between education and unemployment does not necessarily mean that higher education causes lower unemployment, since other economic and social factors may influence both. We will also need to review each source's licensing and terms of use to ensure that we can appropriately use and share the data in our public GitHub repository.
+
 Gaps:
+
+We still need to determine how much the three datasets overlap in country coverage and time periods, particularly whether the OECD data provides enough historical observations to answer our question about changes over the past ten years. We also need to confirm whether the World Bank enrollment data supports our intended time frame. If the overlap is limited, we may need to narrow our analysis to the countries and years with sufficient data.
+
+We also need to conduct a formal data quality assessment before deciding how to clean and merge the datasets. This includes identifying missing values, duplicates, inconsistent country identifiers, and potential outliers. Finally, we need to finalize our file organization, data integration strategy, and automated workflow so that our cleaning and analysis can be reproduced. We will also verify the relevant data licenses and document our sources and processing steps.
+
