@@ -22,6 +22,7 @@ completed.
 ○ A description of any changes to your project plan itself, in particular about your
 progress so far. Also include changes you made to your plan based on feedback
 you may have received for Milestone 2.
+
 Our project plan has slightly changed in terms of an updated timeline of when we expect to finish our tasks for the project. Previously, we expected to be done with the analysis and final report by the end of November, but we decided to push back to early December to ensure the quality of our data processing, analysis, curation, and report. Thus, most of our pre-processing and evaluation will be conducted before spring break, while the analysis and documentation will be finished during and after thanksgiving break. 
 
 Based on our feedback for Milestone 2, we received an ungraded "gaps" part of the project plan. Although this might be a grading issue, we still looked into how well the three datasets link with each other, and observed how different the timeframe for each dataset is. We observed that the World bank data has entries since 1980s, while the OECD and IMF datasets begin in 2017 and 2020. Furthermore, we also observed how each dataset had different number of countries included, with the OECD dataset including only 48, and the World bank dataset having more than 200. Based on these identified gaps, we will need to narrow our analysis to the years and countries that is covered by all datasets. 
