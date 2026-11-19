@@ -31,8 +31,22 @@ Based on our feedback for Milestone 2, we received an ungraded "gaps" part of th
 issue, explain how you resolved it or describe your plan to address it in the near
 future.
 
+Based on the data cleaning, all three of our data sources used different country names. Since the World Bank dataset only had a country code, this helped with standardizing the data by using OpenRefine, especially with countries that did not follow the World Bank's spelling (e.g. Türkiye, China (People's Republic of), etc. For country name data cleaning, I used the regex transforms and editing to clean the data.
+
+During the data cleaning process, the OECD dataset did not have a year column. This was an issue because this is one main column that joins the rest of the datasets. As a placeholder, I put 2023 as the OECD's year. I plan to revisit this and confirm the actual year because this is just a placeholder for the sake of merging these datasets together. 
+Another issue is that all of our datasets consist of data from different time periods. For example, the World Bank data contains data from 1960-2025, IMF is from 2017-2026, and OECD consists of 2023. To address this issue, I transposed the World Banks data, and condensed the years to 2017-2025 because it reduces the noise between our dataset and shares dates between 2017-2025.There were also 52 empty country values from the World Bank data, so I also removed those. 
+
+After data integration, there are many unmatched records. For example, out of the World Bank rows (1,018) and the IMF records (1,007), only 746 matched, while 533 unmatched. For our final project, we plan to make sure to identify the reasons why these records are unmatched, and also the OECD dataset as a 2023 year comparison to the 2017-2025 time frame. 
+
+Another data quality issue during the data integration process was that Peru's OECD attainment share totals 69.8%. This is an issue because the shares should total 100%. Another data quality issue is that in the OECD data, Japan is missing one value. To address this, I added a new column, qc_flag, that flags any values and ones that are under 100%. This made the most sense because I did not want to remove the values and change the data set.
+
+
+
+
 ○ Each team member has to write a short summary of their contributions to the
 current milestone. Each team member should add and commit their contribution
 summary themselves to the shared github repo.
 
 Anthony: As of now, I acquired the three datasets from the websites. After downloading the raw data and the metadata, I fitted the dataset for this project by filtering for columns that would help answer our research question. The raw data created and filtered can help teammates more conveniently process and analyze the datasets for this research project. Next, I checked the licensing of the datasets for CC licenses and researched the reuse of each data from their respective websites. Since this project is for academic-use, there would be no licensing conflict. Once I downloaded the data, I also verified the integrity of the dataset by examining the columns, the number of fields, unique countries, and no duplicates. For the status report, I updated the timeline for each step of our project, with each status either as "completed" or "in-progress", as well as the expected completion date for each task.
+
+Sarah: For the status report, I cleaned all three datasets and also completed the data integration process. During the data cleaning process, I used OpenRefine because it was the easiest for me to visualize data errors, discrepancies, and how to merge the dataset.  In OpenRefine, I removed all aggregated rows (e.g. Year columns), into a general Year column. To standardize IMF and OECD country names, I used the World Bank country codes snd country names. For this, I used the regex transform and mass editing functions on OpenRefine. I also attached my OpenRefine history and the final cleaned datasets, before going into the data integration portion. In Jupyter Notebook, I imported the clean datasets, and joined the tables by country and year.  For the status report, I also wrote the challenges and solutions report. 
