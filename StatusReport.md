@@ -6,6 +6,18 @@ scripts, workflows, workflow diagrams, etc).
 
 ○ An updated timeline indicating the status of each task and when they will be
 completed.
+| Task | Description | Target Completion | Responsible Team Member(s) | Status |
+|---|---|---|---|---|
+| **1. Project Plan** | Finalize our research questions, datasets, methodology, and team responsibilities. Submit the project plan through GitHub. | October 22 | All Team Members | completed |
+| **2. Data Acquisition & Organization** | Download the IMF, OECD, and World Bank datasets, verify their integrity, review licensing restrictions, and organize files in the repository. | October 29 | Anthony | completed |
+| **3. Initial Data Quality Assessment** | Evaluate the datasets for accuracy, completeness, timeliness, and consistency. Identify missing values, duplicates, and differences in country and year coverage. | November 3 | Zoe | completed |
+| **4. Data Cleaning** | Address missing values, standardize country names and year formats, remove duplicates, and document cleaning decisions. | November 7 | Zoe | completed |
+| **5. Data Integration** | Merge the cleaned datasets by country and year, identify unmatched records, and document the integration process. | November 11 | Sarah | completed |
+| **6. Post-Integration Quality Assessment** | Evaluate the merged dataset for accuracy, completeness, timeliness, and consistency to verify that the integration was successful. | November 14 | Sambhavi | completed |
+| **7. Data Analysis & Visualization** | Calculate summary statistics, examine correlations between higher education and unemployment, identify outliers, and create visualizations comparing countries and trends over time. | November 30 | Sarah, Anthony | in-progress |
+| **8. Workflow Automation & Reproducibility** | Develop separate scripts connected by an automated workflow. Document software dependencies and test that the project runs from data acquisition through analysis. | December 2 | Zoe, Anthony | in-progress |
+| **9. Metadata & Documentation** | Create a data dictionary, machine-readable metadata, and documentation covering data sources, licensing, file organization, and reproducibility. | December 4 | Sambhavi, Zoe | in-progress |
+| **10. Final Report & Submission** | Complete the README with our methodology, findings, challenges, and conclusions. Review the project requirements, verify contributions, and create the final GitHub release. | December 7 | All Team Members | in-progress |
 
 ○ A description of any changes to your project plan itself, in particular about your
 progress so far. Also include changes you made to your plan based on feedback
