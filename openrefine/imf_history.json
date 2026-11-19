@@ -1,0 +1,427 @@
+[
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "Country",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+    ],
+    "description": "Reorder columns"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Country using expression value.trim()"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Country",
+          "expression": "value",
+          "columnName": "Country",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Other Advanced Economies (Advanced Economies excluding G7 and Euro Area countries)",
+                "l": "Other Advanced Economies (Advanced Economies excluding G7 and Euro Area countries)"
+              }
+            },
+            {
+              "v": {
+                "v": "Advanced Economies",
+                "l": "Advanced Economies"
+              }
+            },
+            {
+              "v": {
+                "v": "G7",
+                "l": "G7"
+              }
+            },
+            {
+              "v": {
+                "v": "Euro Area (EA)",
+                "l": "Euro Area (EA)"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "grel:value.replace(/,\\s*(Republic of|Principality of|Kingdom of the Netherlands|Kingdom of|Democratic Republic of)$/, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Country using expression grel:value.replace(/,\\s*(Republic of|Principality of|Kingdom of the Netherlands|Kingdom of|Democratic Republic of)$/, \"\")"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "China, People's Republic of"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "China"
+      }
+    ],
+    "description": "Mass edit cells in column Country"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Czech Republic"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Czechia"
+      }
+    ],
+    "description": "Mass edit cells in column Country"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Egypt, Arab Republic of"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Egypt, Arab Rep."
+      }
+    ],
+    "description": "Mass edit cells in column Country"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Hong Kong Special Administrative Region, People's Republic of China"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hong Kong SAR, China"
+      }
+    ],
+    "description": "Mass edit cells in column Country"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Iran, Islamic Republic of"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Iran, Islamic Rep."
+      }
+    ],
+    "description": "Mass edit cells in column Country"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Korea"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Korea, Rep"
+      }
+    ],
+    "description": "Mass edit cells in column Country"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Macao Special Administrative Region, People's Republic of China"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Macao SAR, China"
+      }
+    ],
+    "description": "Mass edit cells in column Country"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Netherlands, The"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Netherlands"
+      }
+    ],
+    "description": "Mass edit cells in column Country"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Puerto Rico"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Puerto Rico (US)"
+      }
+    ],
+    "description": "Mass edit cells in column Country"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "São Tomé and Príncipe"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sao Tome and Príncipe"
+      }
+    ],
+    "description": "Mass edit cells in column Country"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Türkiye"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Turkiye"
+      }
+    ],
+    "description": "Mass edit cells in column Country"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Venezuela, República Bolivariana de"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Venezuela, RB"
+      }
+    ],
+    "description": "Mass edit cells in column Country"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Vietnam"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Viet Nam"
+      }
+    ],
+    "description": "Mass edit cells in column Country"
+  },
+  {
+    "op": "core/transpose-columns-into-rows",
+    "startColumnName": "2017",
+    "columnCount": 9,
+    "ignoreBlankCells": true,
+    "fillDown": true,
+    "separator": null,
+    "keyColumnName": "Year",
+    "valueColumnName": "UnemploymentRate",
+    "description": "Transpose cells in 9 column(s) starting with 2017 into rows in two new columns named Year and UnemploymentRate"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Year",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Year using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "UnemploymentRate",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column UnemploymentRate using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Korea, Rep"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Korea, Rep."
+      }
+    ],
+    "description": "Mass edit cells in column Country"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Sao Tome and Príncipe"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sao Tome and Principe"
+      }
+    ],
+    "description": "Mass edit cells in column Country"
+  }
+]

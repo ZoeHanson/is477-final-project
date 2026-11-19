@@ -1,0 +1,198 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Country using expression value.trim()"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Country",
+          "expression": "value",
+          "columnName": "Country",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "European Union (25 countries)",
+                "l": "European Union (25 countries)"
+              }
+            },
+            {
+              "v": {
+                "v": "OECD",
+                "l": "OECD"
+              }
+            },
+            {
+              "v": {
+                "v": "G20",
+                "l": "G20"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "China (People’s Republic of)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "China"
+      }
+    ],
+    "description": "Mass edit cells in column Country"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Korea"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Korea, Rep."
+      }
+    ],
+    "description": "Mass edit cells in column Country"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Türkiye"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Turkiye"
+      }
+    ],
+    "description": "Mass edit cells in column Country"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Below upper secondary education",
+    "newColumnName": "attain_below_upper_sec",
+    "description": "Rename column Below upper secondary education to attain_below_upper_sec"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Upper secondary or post-secondary non-tertiary education",
+    "newColumnName": "attain_upper_sec",
+    "description": "Rename column Upper secondary or post-secondary non-tertiary education to attain_upper_sec"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Tertiary education",
+    "newColumnName": "attain_tertiary",
+    "description": "Rename column Tertiary education to attain_tertiary"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "attain_below_upper_sec",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column attain_below_upper_sec using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "attain_upper_sec",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column attain_upper_sec using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "attain_tertiary",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column attain_tertiary using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Country",
+    "expression": "grel:2023",
+    "onError": "set-to-blank",
+    "newColumnName": "Year",
+    "columnInsertIndex": 1,
+    "description": "Create column Year at index 1 based on column Country using expression grel:2023"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Country",
+    "expression": "grel:if(isBlank(cells[\"attain_below_upper_sec\"].value), \"missing category\", if(abs(cells[\"attain_below_upper_sec\"].value + cells[\"attain_upper_sec\"].value + cells[\"attain_tertiary\"].value - 100) > 1, \"shares do not sum to 100\", \"ok\"))",
+    "onError": "set-to-blank",
+    "newColumnName": "qc_flag",
+    "columnInsertIndex": 1,
+    "description": "Create column qc_flag at index 1 based on column Country using expression grel:if(isBlank(cells[\"attain_below_upper_sec\"].value), \"missing category\", if(abs(cells[\"attain_below_upper_sec\"].value + cells[\"attain_upper_sec\"].value + cells[\"attain_tertiary\"].value - 100) > 1, \"shares do not sum to 100\", \"ok\"))"
+  }
+]
