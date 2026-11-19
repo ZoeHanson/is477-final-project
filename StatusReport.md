@@ -18,3 +18,5 @@ future.
 ○ Each team member has to write a short summary of their contributions to the
 current milestone. Each team member should add and commit their contribution
 summary themselves to the shared github repo.
+
+Anthony: As of now, I acquired the three datasets from the websites. After downloading the raw data and the metadata, I fitted the dataset for this project by filtering for columns that would help answer our research question. The raw data created and filtered can help teammates more conveniently process and analyze the datasets for this research project. Next, I checked the licensing of the datasets for CC licenses and researched the reuse of each data from their respective websites. Since this project is for academic-use, there would be no licensing conflict. Once I downloaded the data, I also verified the integrity of the dataset by examining the columns, the number of fields, unique countries, and no duplicates. 
